@@ -12,7 +12,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <List onClick={handleClick} />
       {info && <Details info={info} />}
     </div>
