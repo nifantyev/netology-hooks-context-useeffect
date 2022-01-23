@@ -31,18 +31,18 @@ const List = ({ onClick }) => {
   return isLoading ? (
     <div>Загрузка...</div>
   ) : (
-    <ul>
+    <div className="list-group">
       {users.map((o) => (
-        <li
+        <a
           key={o.id}
-          style={o.id === selectedId ? { backgroundColor: 'blue' } : {}}
+          href="#/"
+          className={`list-group-item ${o.id === selectedId ? 'active' : ''}`}
+          onClick={(event) => handleClick(event, o)}
         >
-          <a href="#/" onClick={(event) => handleClick(event, o)}>
-            {o.name}
-          </a>
-        </li>
+          {o.name}
+        </a>
       ))}
-    </ul>
+    </div>
   );
 };
 
