@@ -25,12 +25,20 @@ const Details = ({ info }) => {
     <div>Загрузка...</div>
   ) : (
     details && (
-      <div>
-        <img src={details.avatar} alt={details.name} />
-        <h2>{details.name}</h2>
-        <div>City: {details.details.city}</div>
-        <div>Company: {details.details.company}</div>
-        <div>Position: {details.details.position}</div>
+      <div className="list-group">
+        <img
+          className="list-group-item"
+          src={details.avatar}
+          alt={details.name}
+        />
+        <h2 className="list-group-item">{details.name}</h2>
+        <div className="list-group-item">City: {details.details.city}</div>
+        <div className="list-group-item">
+          Company: {details.details.company}
+        </div>
+        <div className="list-group-item">
+          Position: {details.details.position}
+        </div>
       </div>
     )
   );
